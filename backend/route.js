@@ -23,5 +23,3 @@ router.get("/2/tweets", async (req, res, next) => {
 });
 
 module.exports = router;
-
-// https://api.twitter.com/2/tweets/${id}?expansions=author_id,attachments.media_keys&user.fields=profile_image_url,verified&tweet.fields=created_at,attachments,public_metrics,entities,source&media.fields=preview_image_url,url

@@ -59,7 +59,6 @@ function App() {
           }}
           onChange={(e) => {
             seturl(e.target.value);
-            // console.log(url);
             setId(textRef.current.value?.split("/")[5]?.split("?")[0]);
           }}
           ref={textRef}
