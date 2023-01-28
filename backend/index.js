@@ -8,14 +8,11 @@ app.use(
   cors({
     origin: true,
     credentials: true,
-    preflightContinue: true,
-    optionsSuccessStatus: 200,
   })
 );
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.options("/api", cors());
 app.get("/", async (req, res, next) => {
   res.send({ message: "Running......" });
 });
