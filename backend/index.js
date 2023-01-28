@@ -8,6 +8,7 @@ app.use(
   cors({
     origin: true,
     credentials: true,
+    preflightContinue: true,
     optionsSuccessStatus: 200,
   })
 );
