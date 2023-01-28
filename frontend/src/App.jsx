@@ -21,10 +21,17 @@ function App() {
     getdata();
   };
 
+  let config = {
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+  };
+
   function getdata() {
     console.log("loading");
     axios
-      .get(`${process.env.REACT_APP_URL}/api/2/tweets?id=${id}`, {})
+      .get(`${process.env.REACT_APP_URL}/api/2/tweets?id=${id}`, config)
       // .get(`/api/2/tweets?id=${id}`, {})
       .then((response) => {
         setData(response.data);
